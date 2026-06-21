@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      AtlasCraft Construction
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+  </head>
+  <body>
+    <nav class="bg-stone-100 border-b" x-data="{ open: false }">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <a
+                    href="professional_site.html"
+                    class="text-2xl font-bold"
+                >
+                    AtlasCraft Construction
+                </a>
+                <button
+                    @click="open = !open"
+                    class="md:hidden text-3xl"
+                >
+                    ☰
+                </button>
+                <div class="hidden md:flex gap-8">
+                    <a
+                        href="services.html"
+                        class="hover:text-blue-700"
+                    >
+                        Services
+                    </a>
+                    <a
+                        href="contact.html"
+                        class="hover:text-blue-700"
+                    >
+                        Contact
+                    </a>
+                </div>
+            </div>
+            <div
+                x-show="open"
+                class="md:hidden pb-4"
+            >
+                <a
+                    href="services.html"
+                    class="block py-2"
+                >
+                    Services
+                </a>
+                <a
+                    href="contact.html"
+                    class="block py-2"
+                >
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="max-w-6xl mx-auto px-4"> 
+        <main>
+            <section class="py-16 text-center">
+                <img
+                    src="images/services_hero.png"
+                    alt="Home remodeling services"
+                    class="w-full h-56 md:h-96 object-cover object-center rounded-lg"
+                />
+                <h1 class="text-4xl md:text-5xl font-bold mt-8">
+                    Our Services
+                </h1>
+                <p class="text-lg md:text-xl mt-4 max-w-3xl mx-auto">
+                    AtlasCraft Construction provides professional remodeling and
+                    home improvement services designed to enhance the beauty,
+                    functionality, and value of your home.
+                </p>
+            </section>
+            <section class="py-16 px-8 bg-stone-100 rounded-lg">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+                    Remodeling Services
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-2xl font-semibold mb-3">
+                            Kitchen Remodeling
+                        </h3>
+                        <p>
+                            Upgrade your kitchen with new cabinetry, countertops,
+                            backsplashes, lighting, and flooring. We create spaces
+                            that are both beautiful and functional.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-2xl font-semibold mb-3">
+                            Bathroom Remodeling
+                        </h3>
+                        <p>
+                            Transform outdated bathrooms with modern tile, custom
+                            showers, vanities, fixtures, and finishes designed to
+                            fit your style and needs.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-2xl font-semibold mb-3">
+                            Flooring Installation
+                        </h3>
+                        <p>
+                            We install luxury vinyl plank, hardwood, laminate,
+                            and tile flooring with attention to detail and
+                            long-lasting craftsmanship.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-2xl font-semibold mb-3">
+                            Interior Painting
+                        </h3>
+                        <p>
+                            Refresh your home with professional painting services
+                            that deliver clean lines, smooth finishes, and lasting
+                            results.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow md:col-span-2">
+                        <h3 class="text-2xl font-semibold mb-3">
+                            General Home Improvements
+                        </h3>
+                        <p>
+                            From trim work and drywall repairs to custom interior
+                            upgrades, we provide a wide range of remodeling
+                            solutions tailored to your home.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="py-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+                    Our Process
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h3 class="text-2xl font-semibold mb-3">
+                            1. Consultation
+                        </h3>
+                        <p>
+                            We discuss your goals, ideas, budget, and timeline to
+                            understand the vision for your project.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h3 class="text-2xl font-semibold mb-3">
+                            2. Estimate
+                        </h3>
+                        <p>
+                            We provide a detailed estimate outlining the scope of work,
+                            materials, and expected costs.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h3 class="text-2xl font-semibold mb-3">
+                            3. Construction
+                        </h3>
+                        <p>
+                            Our team completes the project with quality craftsmanship,
+                            attention to detail, and clear communication.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h3 class="text-2xl font-semibold mb-3">
+                            4. Final Walkthrough
+                        </h3>
+                        <p>
+                            We review the completed work with you to ensure everything
+                            meets your expectations.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="py-16 text-center rounded-lg">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Ready to Start Your Project?
+                </h2>
+                <p class="text-lg max-w-3xl mx-auto">
+                    Whether you're planning a kitchen remodel, bathroom renovation,
+                    new flooring installation, or another home improvement project,
+                    AtlasCraft Construction is ready to help. Contact us today to
+                    schedule your free consultation and estimate.
+                </p>
+                <a
+                    href="contact.html"
+                    class="inline-block mt-8 bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800"
+                >
+                    Request a Free Estimate
+                </a>
+            </section>
+        </main>
+    </div>
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="max-w-6xl mx-auto px-4 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">
+                        Contact Information
+                    </h3>
+                    <p>(555) 123-4567</p>
+                    <p>info@atlascraftconstruction.com</p>
+                    <p>Queens, New York</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">
+                        Why Homeowners Choose Us
+                    </h3>
+                    <p>✓ 200+ Projects Completed</p>
+                    <p>✓ 10+ Years Experience</p>
+                    <p>✓ Licensed &amp; Insured</p>
+                    <p>✓ 100% Customer Satisfaction Focus</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">
+                        Service Areas
+                    </h3>
+                    <p>Queens</p>
+                    <p>Brooklyn</p>
+                    <p>Manhattan</p>
+                    <p>Bronx</p>
+                    <p>Staten Island</p>
+                    <p>Long Island</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-6 text-center">
+                <p>
+                    © 2026 AtlasCraft Construction. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>

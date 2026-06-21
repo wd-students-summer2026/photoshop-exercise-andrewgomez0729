@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 34px;
+}
+
+h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 26px;
+}
+
+h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 22px;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: indigo;
+}
+
+a:hover {
+    background-color: gray;
+    color: #ffffff
+}
+
+a:active {
+    background-color: #ff0000;
+    color: #ffffff
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 5px solid  #d8cbc4;
+}
+
+#my_background {
+    background-color: antiquewhite;
+}
+
+#my_interests {
+    background-color: beige;
+}
+
+#my_background h2,
+#my_interests h2 {
+    border-bottom: 2px solid #333333;
+    letter-spacing: 1px;
+}
+
+#article_2 h2 {
+    position:relative;
+    top: 0;
+    left: 0;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    text-align: center; 
+}
+
+button {
+    display: block;       
+    margin-left: auto;    
+    margin-right: auto;   
+    margin-top: 15px;     
+    margin-bottom: 20px;  
+    padding: 10px 20px;   
+}
+
+.wireframe_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.wireframe_grid img {
+    width: 250px;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.site_map img {
+    width: 800px;
+    height: auto;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+}

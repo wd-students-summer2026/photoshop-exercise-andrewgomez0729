@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            Videogames             
+        </title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="js/jquery.min.js"></script>
+        <script src="js/velocity.min.js"></script>
+        <script src="js/main.js"></script>
+        <!-- Media query for narrow browser width -->
+        <link
+            rel="stylesheet"
+            media="only screen and (max-width: 480px)"
+            href="css/mobile.css"
+        />
+
+        <!-- Media query for medium browser width -->
+        <link
+            rel="stylesheet"
+            media="only screen and (min-width: 481px) and (max-width: 960px)"
+            href="css/tablet.css"
+        />
+
+        <!-- Media query for full browser width -->
+        <link
+            rel="stylesheet"
+            media="only screen and (min-width: 961px)"
+            href="css/desktop.css"
+        />
+
+        <!-- Prevent smartphones from scaling the page by default -->
+        <meta name="viewport" content="initial-scale=1" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Call of Duty: Black Ops 7</h1>
+                <nav>
+                    <h2>Page Navigation</h2>
+                    <ul>
+                        <li><a href="index.html">Home Page</a></li>
+                        <li><a href="more_about_me.html">More About Me</a></li>
+                    </ul>
+                </nav>
+            </header> 
+            <main>
+                <article
+                    id="article_1"
+                    class="column1"
+                    onmouseover="changeArticle1Content()"
+                    onmouseout="revertArticle1Content()"
+                >
+                    <h2>The Thrill of Online Multiplayer</h2>
+                    <p>
+                        Call of Duty: Black Ops 7 is incredibly fun to play because 
+                        of the intense lobby culture. You can voice chat directly 
+                        with other players, hear them get furious when you outplay 
+                        them, and watch them rage quit mid-match. Seeing opposing 
+                        players get genuinely mad makes every victory feel much 
+                        more rewarding.
+                    </p>
+                    <img src="images/operator_blackops.jpg" alt="Operator From Blackops"/>
+                </article>
+                <article
+                    id="article_2"
+                    class="column2"
+                    onmouseover="animateArticle2Heading()" 
+                    onclick="resizeArticle2Image()"
+                >
+                    <h2>Scorestreaks</h2>
+                    <p>
+                        In Black Ops 7, stringing together multiple eliminations 
+                        without dying allows you to call in devastating scorestreaks.
+                        These tactical tools can completely shift the momentum of an
+                        online match by tracking down enemy players or clearing out 
+                        objectives.
+                    </p>
+                    <img src="images/nuke_blackops.jpg" alt="Nuke From Blackops" />
+                    <button>Huge Explosion</button>
+                </article>
+                <article class="column3">
+                    <h2>Why I Enjoy Black Ops 7</h2>
+                    <p>
+                        One reason I enjoy Black Ops 7 is because every match feels
+                        different. Whether I am playing with friends, working toward
+                        challenges, or trying to earn high scorestreaks, there is
+                        always something new to accomplish. The fast-paced gameplay
+                        and competitive atmosphere make it one of my favorite video
+                        games to play in my free time.
+                    </p>
+                </article>
+            </main>
+            <footer>
+                <p>Created by Andrew Gomez for Intro to Web Design.</p>
+            </footer>            
+        </div>
+    </body>
+</html>

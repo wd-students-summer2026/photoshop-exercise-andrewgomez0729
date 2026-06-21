@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      AtlasCraft Construction
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+  </head>
+
+  <body>
+    <nav class="bg-stone-100 border-b" x-data="{ open: false }">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <a
+                    href="professional_site.html"
+                    class="text-2xl font-bold"
+                >
+                    AtlasCraft Construction
+                </a>
+                <button
+                    @click="open = !open"
+                    class="md:hidden text-3xl"
+                >
+                    ☰
+                </button>
+                <div class="hidden md:flex gap-8">
+                    <a
+                        href="services.html"
+                        class="hover:text-blue-700"
+                    >
+                        Services
+                    </a>
+                    <a
+                        href="contact.html"
+                        class="hover:text-blue-700"
+                    >
+                        Contact
+                    </a>
+                </div>
+            </div>
+            <div
+                x-show="open"
+                class="md:hidden pb-4"
+            >
+                <a
+                    href="services.html"
+                    class="block py-2"
+                >
+                    Services
+                </a>
+                <a
+                    href="contact.html"
+                    class="block py-2"
+                >
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="max-w-6xl mx-auto px-4"> 
+        <main>
+            <section class="py-16 text-center">
+                <img
+                    src="images/hero_remodel.png"
+                    alt="Modern kitchen remodel"
+                    class="w-full h-64 md:h-[500px] object-cover object-bottom rounded-lg"                />
+                <h1 class="text-4xl md:text-6xl font-bold mt-8">
+                    Transforming Houses Into Dream Homes
+                </h1>
+                <p class="text-lg md:text-xl mt-4 max-w-3xl mx-auto">
+                    AtlasCraft Construction specializes in kitchen remodeling,
+                    bathroom renovations, flooring installation, painting, and
+                    complete interior home improvements. We deliver quality
+                    craftsmanship, attention to detail, and results built to last.
+                </p>
+                <a
+                    href="contact.html"
+                    class="inline-block mt-8 bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800"
+                >
+                    Request a Free Estimate
+                </a>
+            </section>
+            <section class="py-16 px-8 bg-stone-100 rounded-lg">                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+                    Our Services
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="border rounded-lg p-6 shadow">
+                        <h3 class="text-xl font-semibold mb-3">
+                            Kitchen Remodeling
+                        </h3>
+                        <p>
+                            Complete kitchen renovations including cabinets,
+                            countertops, backsplashes, lighting, and flooring.
+                        </p>
+                    </div>
+                    <div class="border rounded-lg p-6 shadow">
+                        <h3 class="text-xl font-semibold mb-3">
+                            Bathroom Remodeling
+                        </h3>
+                        <p>
+                            Modern bathroom upgrades featuring tile work,
+                            vanities, showers, tubs, and custom finishes.
+                        </p>
+                    </div>
+                    <div class="border rounded-lg p-6 shadow">
+                        <h3 class="text-xl font-semibold mb-3">
+                            Flooring Installation
+                        </h3>
+                        <p>
+                            Professional installation of luxury vinyl plank,
+                            hardwood, laminate, and tile flooring.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="py-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">
+                    Recent Projects
+                </h2>
+                <div
+                    x-data="{
+                        images: [
+                            'images/kitchen_remodel.png',
+                            'images/bathroom_remodel.png',
+                            'images/flooring_installation.png'
+                        ],
+                        current: 0
+                    }"
+                    class="text-center"
+                >
+                    <img
+                        :src="images[current]"
+                        alt="Construction Project"
+                        class="w-full max-w-4xl mx-auto h-64 md:h-[500px] object-cover rounded-lg"
+                    >
+                    <div class="mt-6">
+                        <button
+                            @click="current = (current - 1 + images.length) % images.length"
+                            class="bg-gray-700 text-white px-6 py-3 rounded mr-2"
+                        >
+                            Previous
+                        </button>
+                        <button
+                            @click="current = (current + 1) % images.length"
+                            class="bg-blue-700 text-white px-6 py-3 rounded"
+                        >
+                            Next
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="py-16 px-8 bg-gray-100 rounded-lg">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+                    Why Choose AtlasCraft Construction
+                </h2>
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold">
+                            Licensed & Insured
+                        </h3>
+                        <p class="mt-2">
+                            AtlasCraft Construction operates with the proper licensing
+                            and insurance to protect both our clients and our team.
+                            Homeowners can have peace of mind knowing their projects
+                            are completed professionally and responsibly.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold">
+                            Free Estimates
+                        </h3>
+                        <p class="mt-2">
+                            We provide free, no-obligation estimates so homeowners can
+                            understand the scope and cost of their project before any
+                            work begins. Our goal is to offer honest pricing and clear
+                            communication from the very start.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold">
+                            Quality Craftsmanship
+                        </h3>
+                        <p class="mt-2">
+                            We take pride in every project we complete. From flooring
+                            installation to full kitchen and bathroom renovations, we
+                            focus on attention to detail, durable materials, and
+                            workmanship that stands the test of time.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold">
+                            Customer Satisfaction
+                        </h3>
+                        <p class="mt-2">
+                            Our success is built on satisfied customers. We work closely
+                            with homeowners throughout every stage of the remodeling
+                            process to ensure expectations are met and the finished
+                            result reflects their vision.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="py-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+                    What Our Clients Say
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-stone-100 p-6 rounded-lg">
+                        <p>
+                            "AtlasCraft completely transformed our kitchen. The team was
+                            professional, punctual, and delivered amazing results."
+                        </p>
+                        <p class="mt-4 font-semibold">
+                            — Sarah M.
+                        </p>
+                    </div>
+                    <div class="bg-stone-100 p-6 rounded-lg">
+                        <p>
+                            "Our bathroom renovation exceeded our expectations. The quality
+                            of work was excellent and communication was great throughout."
+                        </p>
+                        <p class="mt-4 font-semibold">
+                            — Michael R.
+                        </p>
+                    </div>
+                    <div class="bg-stone-100 p-6 rounded-lg">
+                        <p>
+                            "The new flooring completely changed the look of our home.
+                            We would definitely hire AtlasCraft again."
+                        </p>
+                        <p class="mt-4 font-semibold">
+                            — Jennifer T.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="max-w-6xl mx-auto px-4 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">
+                        Contact Information
+                    </h3>
+                    <p>(555) 123-4567</p>
+                    <p>info@atlascraftconstruction.com</p>
+                    <p>Queens, New York</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">
+                        Why Homeowners Choose Us
+                    </h3>
+                    <p>✓ 200+ Projects Completed</p>
+                    <p>✓ 10+ Years Experience</p>
+                    <p>✓ Licensed &amp; Insured</p>
+                    <p>✓ 100% Customer Satisfaction Focus</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">
+                        Service Areas
+                    </h3>
+                    <p>Queens</p>
+                    <p>Brooklyn</p>
+                    <p>Manhattan</p>
+                    <p>Bronx</p>
+                    <p>Staten Island</p>
+                    <p>Long Island</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-6 text-center">
+                <p>
+                    © 2026 AtlasCraft Construction. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>

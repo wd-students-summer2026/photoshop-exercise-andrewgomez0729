@@ -1,0 +1,11 @@
+nav {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    border-top: 3px solid #4b5563;
+}
